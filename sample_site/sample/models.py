@@ -6,3 +6,4 @@ class EmployeeRoster(models.Model):
     lName = models.CharField(max_length=255)
     Department = models.CharField(max_length=255)
     Supervisor = models.CharField(max_length=255)
+    emailAddress = models.EmailField(null=True)

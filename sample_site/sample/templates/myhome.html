@@ -7,5 +7,10 @@
     </head>
     <body>
         <h1>Hello, this is my Homepage</h1>
+        <ul>
+            {%for employee in Employees%}
+                <li>{{employee.fName}} {{employee.lName}} - {{employee.emailAddress}}</li>
+            {%endfor%}
+        </ul>
     </body>
 </html>
