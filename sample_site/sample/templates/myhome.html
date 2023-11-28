@@ -9,7 +9,9 @@
         <h1>Hello, this is my Homepage</h1>
         <ul>
             {%for employee in Employees%}
+            <a href="details/{{employee.id}}">
                 <li>{{employee.fName}} {{employee.lName}} - {{employee.emailAddress}}</li>
+            </a>
             {%endfor%}
         </ul>
     </body>
