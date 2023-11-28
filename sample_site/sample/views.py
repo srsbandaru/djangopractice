@@ -8,7 +8,7 @@ from .models import EmployeeRoster
 #     template = loader.get_template("myhome.html")
 #     return HttpResponse(template.render())
 
-# Home view
+# Members view
 def home(request):
     myEmployees = EmployeeRoster.objects.all().values()
     template = loader.get_template("myhome.html")
@@ -27,6 +27,21 @@ def details(request, id):
     return HttpResponse(template.render(context, request))
 
 # English Worksheet 1 view
-def worksheet1(request):
+def engWorksheet1(request):
     template = loader.get_template("eng/01-worksheet.html")
+    return HttpResponse(template.render())
+
+# English Worksheet 13 view
+def engWorksheet13(request):
+    template = loader.get_template("eng/13-worksheet.html")
+    return HttpResponse(template.render())
+
+# Main view for landing page or home page
+def main(request):
+    template = loader.get_template("main.html")
+    return HttpResponse(template.render())
+
+# Sample view
+def sample(request):
+    template = loader.get_template("sample.html")
     return HttpResponse(template.render())
