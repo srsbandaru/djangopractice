@@ -45,3 +45,8 @@ def main(request):
 def sample(request):
     template = loader.get_template("sample.html")
     return HttpResponse(template.render())
+
+# English Grammar view
+def engGrammar(request):
+    template = loader.get_template("eng/grammar.html")
+    return HttpResponse(template.render())
