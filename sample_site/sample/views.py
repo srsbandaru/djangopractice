@@ -50,3 +50,8 @@ def sample(request):
 def engGrammar(request):
     template = loader.get_template("eng/grammar.html")
     return HttpResponse(template.render())
+
+# Home Science Orange Squash
+def OrangeSquash(request):
+    template = loader.get_template("hs/orange-squash.html")
+    return HttpResponse(template.render())
