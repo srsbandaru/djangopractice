@@ -55,3 +55,13 @@ def engGrammar(request):
 def OrangeSquash(request):
     template = loader.get_template("hs/orange-squash.html")
     return HttpResponse(template.render())
+
+# Basic Computing revision
+def revision(request):
+    template = loader.get_template("bc/revision.html")
+    return HttpResponse(template.render())
+
+# Painting Exam-QA
+def exam(request):
+    template = loader.get_template("painting/exam-QA.html")
+    return HttpResponse(template.render())

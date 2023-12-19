@@ -9,5 +9,7 @@ urlpatterns = [
     path('eng/worksheet-1', views.engWorksheet1, name = "engWorksheet1"),
     path('eng/worksheet-13', views.engWorksheet13, name = "engWorksheet13"),
     path('eng/grammar', views.engGrammar, name = "engGrammar"),
-    path('hs/orange-squash', views.OrangeSquash, name = "OrangeSquash")
+    path('hs/orange-squash', views.OrangeSquash, name = "OrangeSquash"),
+    path('bc/revision', views.revision, name = "revision"),
+    path('painting/exam-QA', views.exam, name = "exam")
 ]
