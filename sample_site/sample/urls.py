@@ -11,5 +11,8 @@ urlpatterns = [
     path('eng/grammar', views.engGrammar, name = "engGrammar"),
     path('hs/orange-squash', views.OrangeSquash, name = "OrangeSquash"),
     path('bc/revision', views.revision, name = "revision"),
-    path('painting/exam-QA', views.exam, name = "exam")
+    path('painting/exam-QA', views.exam, name = "exam"),
+    path('students/', views.students, name = "students"),
+    path('students/details/<int:id>', views.studentDetails, name = "studentDetails"),
+    path('employee/', views.employee, name = "employee")
 ]

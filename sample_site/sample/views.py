@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from .models import EmployeeRoster
+from .models import EmployeeRoster, Students, Employee
 
 # Create your views here.
 # def home(request):
@@ -65,3 +65,32 @@ def revision(request):
 def exam(request):
     template = loader.get_template("painting/exam-QA.html")
     return HttpResponse(template.render())
+
+# Students view
+def students(request):
+    myStudents = Students.objects.all().values()
+    template = loader.get_template("students/students.html")
+    context = {
+        "students":myStudents
+    }
+    return HttpResponse(template.render(context, request))
+
+# Students Details view
+def studentDetails(request, id):
+    myStudents = Students.objects.get(id=id)
+    template = loader.get_template("students/student_details.html")
+    context = {
+        "students":myStudents
+    }
+    return HttpResponse(template.render(context, request))
+
+# Employee view
+def employee(request):
+    myEmployees = Employee.objects.all().values()
+    template = loader.get_template("employee/employee.html")
+    context = {
+        "Employees":myEmployees
+    }
+    return HttpResponse(template.render(context, request))
+
+    

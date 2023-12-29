@@ -1,0 +1,15 @@
+{% extends "master.html" %}
+{% block title %}
+    Students
+{% endblock title %}
+{% block content %}
+    <h1>Students</h1>
+    <ul>
+        {% for student in students %}
+        <a href="details/{{student.id}}">
+            <li>{{student.studentName}}</li>
+        </a>
+        {% endfor %}
+    </ul>
+    <p><a href="/">Back</a></p>
+{% endblock content %}
