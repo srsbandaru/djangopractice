@@ -36,6 +36,11 @@ def engWorksheet13(request):
     template = loader.get_template("eng/13-worksheet.html")
     return HttpResponse(template.render())
 
+# English Worksheet 16
+def engWorksheet16(request):
+    template = loader.get_template("eng/16-worksheet.html")
+    return HttpResponse(template.render())
+
 # Main view for landing page or home page
 def main(request):
     template = loader.get_template("main.html")
@@ -93,4 +98,15 @@ def employee(request):
     }
     return HttpResponse(template.render(context, request))
 
-    
+# Employee details view
+def employeeDetails(request, id):
+    myEmployee = Employee.objects.get(EMPLOYEE_ID=id)
+    template = loader.get_template("employee/employee_details.html")
+    context = {
+        "employee":myEmployee
+    }
+    return HttpResponse(template.render(context, request))
+# Travel blog view
+def travelBlog(request):
+    template = loader.get_template("travelblog/travel.html") 
+    return HttpResponse(template.render())

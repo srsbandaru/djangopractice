@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <body>
+        {% block content %}
+        <header>
+            <h1>Family Trip</h1>
+        </header>
+        <nav>
+            <a href="#journey">Journey</a>
+            <a href="#travelPlaces">Travel Places</a>
+            <a href="#photoGallery">Photo Gallery</a></li>
+        </nav>
+        <main>
+            <section id="journey">
+                <div>
+                    <h1>Journey</h1>
+                    <p>Welcome to our Family Journey</p>
+                </div>
+            </section>
+            <section id="travelPlaces">
+                <h1>Travel Places</h1>
+                <div>
+                    <p><b>Day 1:</b> We started on our journey from Hyderabad to Solapur in the Taigun. Upon reaching Solapur, we visited Katham and later traveled to Mahabaleshwar by City. In the evening, we checked into the Sunset Villa.</p>  
+                </div>
+                <div>
+                    <p><b>Day 2:</b> Our day began with a visit to the Shiva and Krishna temples in Mahabaleshwar, exploring the scenic valley, lush forests, and the Krishna River. We also took some time to wander through the local market. The evening was spent back at the Sunset Villa.</p>
+                </div>
+                <div>
+                    <p><b>Day 3:</b> Departing from Mahabaleshwar, we continued our journey to Pune in the Taigun, making stops at the Strawberry Land and enjoying horse racing. On our way, we paused at Khandala before reaching Pune. Checking into the Radisson Blu, we dined at a restaurant in the city before returning to the comfort of Radisson Blu for the night.</p>
+                </div>
+            </section>
+            <section id="photoGallery">
+                <h1>Photo Gallery</h1>
+                <div>
+                    <img src="{% static 'solapur.png' %}" alt="">
+                    <img src="{% static 'Mahabaleshwar.jpeg' %}" alt="">
+                    <img src="{% static 'Khandala-pune.jpeg' %}" alt="">
+                    <img src="{% static 'Pune.jpeg' %}" alt="">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; Designed by Sriram Surya 2024</p>
+        </footer>
+        {% endblock content %}
+    </body>
+</html>

@@ -5,8 +5,11 @@
 {% block content %}
     <h1>Employees</h1>
     <ul>
-        {% for employee in Employees%}
-        <li>{{employee.FIRST_NAME}} {{employee.LAST_NAME}}</li>
+        {% for employee in Employees %}
+        <a href="details/{{employee.EMPLOYEE_ID}}">
+            <li>{{employee.FIRST_NAME}} {{employee.LAST_NAME}}</li>
+        </a>
         {% endfor %}
     </ul>
+    <a href="/">Back</a>
 {% endblock content %}
