@@ -19,3 +19,9 @@ class Employee(models.Model):
     LAST_NAME = models.CharField(max_length=255)
     JOB_ID = models.CharField(max_length=255)
     SALARY = models.IntegerField(null=True)
+# Trip model
+class Trip(models.Model):
+    Days = models.CharField(max_length=255)
+    Origin = models.CharField(max_length=255)
+    Destination = models.CharField(max_length=255)
+
