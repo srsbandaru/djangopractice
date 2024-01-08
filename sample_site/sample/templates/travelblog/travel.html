@@ -1,9 +1,13 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Travel Blog</title>
+    </head>
     <body>
-        {% block content %}
         <header>
             <h1>Family Trip</h1>
         </header>
@@ -34,16 +38,15 @@
             <section id="photoGallery">
                 <h1>Photo Gallery</h1>
                 <div>
-                    <img src="{% static 'solapur.png' %}" alt="">
-                    <img src="{% static 'Mahabaleshwar.jpeg' %}" alt="">
-                    <img src="{% static 'Khandala-pune.jpeg' %}" alt="">
-                    <img src="{% static 'Pune.jpeg' %}" alt="">
+                    <img src="{% static 'solapur.png' %}" alt="Solapur">
+                    <img src="{% static 'Mahabaleshwar.jpeg' %}" alt="Mahabaleshwar">
+                    <img src="{% static 'Khandala-pune.jpeg' %}" alt="Khandala-pune">
+                    <img src="{% static 'Pune.jpeg' %}" alt="Pune">
                 </div>
             </section>
         </main>
         <footer>
             <p>&copy; Designed by Sriram Surya 2024</p>
         </footer>
-        {% endblock content %}
     </body>
 </html>

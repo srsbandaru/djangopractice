@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+{% block title %}
+    Trip
+{% endblock title %}
+{% block content %}
+    <h1>Trip</h1>
+    <ol>
+        {% for day in Trip %}
+        <a href="details/{{day.id}}">
+            <li>{{day.Days}} </li>
+        </a>
+        {% endfor %} 
+    </ol>
+{% endblock content %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from .models import EmployeeRoster, Students, Employee
+from .models import EmployeeRoster, Students, Employee, Trip
 
 # Create your views here.
 # def home(request):
@@ -110,3 +110,19 @@ def employeeDetails(request, id):
 def travelBlog(request):
     template = loader.get_template("travelblog/travel.html") 
     return HttpResponse(template.render())
+# Trip view
+def TripView(request):
+    myTrip = Trip.objects.all().values()
+    template = loader.get_template("trip/trip.html")
+    context = {
+        "Trip":myTrip
+    }
+    return HttpResponse(template.render(context, request))
+# Trip Details view
+def TripDetails(request, id):
+    myTrips = Trip.objects.get(id=id)
+    template = loader.get_template("trip/trip_details.html")
+    context = {
+        "day":myTrips
+    }
+    return HttpResponse(template.render(context, request))
