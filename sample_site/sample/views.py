@@ -41,6 +41,10 @@ def engWorksheet16(request):
     template = loader.get_template("eng/16-worksheet.html")
     return HttpResponse(template.render())
 
+# English Worksheet 17
+def engWorksheet18(request):
+    template = loader.get_template("eng/18-worksheet.html")
+    return HttpResponse(template.render())
 # Main view for landing page or home page
 def main(request):
     template = loader.get_template("main.html")
