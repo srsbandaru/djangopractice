@@ -20,5 +20,6 @@ urlpatterns = [
     path('employee/details/<int:id>', views.employeeDetails, name = "employeeDetails"),
     path('travelblog/travel', views.travelBlog, name = "travelBlog"),
     path('trip/', views.TripView, name = "TripView"),
-    path('trip/details/<int:id>', views.TripDetails, name = "TripDetails")
+    path('trip/details/<int:id>', views.TripDetails, name = "TripDetails"),
+    path('festivalPage/index', views.Sankranthi, name = "Sankranthi")
 ]

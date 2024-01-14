@@ -130,3 +130,7 @@ def TripDetails(request, id):
         "day":myTrips
     }
     return HttpResponse(template.render(context, request))
+# Sankranthi view
+def Sankranthi(request):
+    template = loader.get_template("festivalPage/index.html")
+    return HttpResponse(template.render())

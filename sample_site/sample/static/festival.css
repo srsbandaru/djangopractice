@@ -1,0 +1,35 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+header
+{
+    background-color: lime;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 0.5em;
+    width: 100%;
+}
+nav a
+{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    float: left;
+    display: block;
+}
+main
+{
+    max-width: 900px;
+    margin: 10px auto;
+}
+.images
+{
+    max-width: 45%;
+    margin: 10px;
+}
