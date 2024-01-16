@@ -33,3 +33,6 @@ class Trip(models.Model):
     Origin = models.CharField(max_length=255)
     Destination = models.CharField(max_length=255)
 
+    def __str__(self):
+        return f"{self.Days}"
+
