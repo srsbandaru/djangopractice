@@ -2,10 +2,11 @@ body
 {
     margin: 0;
     padding: 0;
+    background-color: gray;
 }
 header
 {
-    background-color: lime;
+    background-color: green;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -21,15 +22,52 @@ nav a
     text-align: center;
     padding: 14px 16px;
     float: left;
+    font-size: 20px;
     display: block;
 }
+
 main
 {
     max-width: 900px;
     margin: 10px auto;
+    background-color: white;
+    border-radius: 17px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    font-size: 20px;
 }
-.images
+#Home
+{   
+    text-align: center;
+}
+#AboutSankranthi
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#AboutSankranthi img
+{
+    max-width: 45%;
+    width: 100%;
+    height: 300px;
+    margin: 10px;
+}
+#KiteFlying
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#KiteFlying img
 {
     max-width: 45%;
     margin: 10px;
+}
+footer
+{
+    text-align: center;
+    background-color: orange;
+    color: white;
+    padding: 10px;
 }
