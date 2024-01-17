@@ -17,5 +17,5 @@ admin.site.register(Students, studentAdmin)
 class tripAdmin(admin.ModelAdmin):
     list_display = ("Days", "Origin", "Destination")
 
-admin.site.register(Trip, tripAdmin)
+admin.site.register(Trip, tripAdmin) 
 

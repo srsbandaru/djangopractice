@@ -21,5 +21,5 @@ urlpatterns = [
     path('travelblog/travel', views.travelBlog, name = "travelBlog"),
     path('trip/', views.TripView, name = "TripView"),
     path('trip/details/<int:id>', views.TripDetails, name = "TripDetails"),
-    path('festivalPage/index', views.Sankranthi, name = "Sankranthi")
+    path('festivals/sankranthi', views.Sankranthi, name = "Sankranthi")
 ]
