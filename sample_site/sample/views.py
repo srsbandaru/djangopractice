@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from .forms import StudentForm
 from .models import EmployeeRoster, Students, Employee, Trip
 
 # Create your views here.
@@ -134,3 +135,11 @@ def TripDetails(request, id):
 def Sankranthi(request):
     template = loader.get_template("festivals/sankranthi.html")
     return HttpResponse(template.render())
+# Create Student
+def create_student(request):
+    template = "students/student_form.html"
+    form = StudentForm()
+    context = {
+        'form':form
+    }
+    return render(request, template, context)
