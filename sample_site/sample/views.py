@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from .forms import StudentForm
 from .models import EmployeeRoster, Students, Employee, Trip
+from django.views import View
 
 # Create your views here.
 # def home(request):
@@ -135,11 +136,25 @@ def TripDetails(request, id):
 def Sankranthi(request):
     template = loader.get_template("festivals/sankranthi.html")
     return HttpResponse(template.render())
+
 # Create Student
-def create_student(request):
+class create_student(View):
     template = "students/student_form.html"
-    form = StudentForm()
-    context = {
-        'form':form
-    }
-    return render(request, template, context)
+    success_url = "sample:main"
+
+    def get(self, request):
+        form = StudentForm()
+        context = {
+            'form':form
+        }
+        return render(request, self.template, context)
+    
+    def post(self, request):
+        form = StudentForm(request.POST)
+        if not form.is_valid():
+            context = {
+                'form':form
+            }
+            return render(request, self.template, context)
+        form.save()
+        return redirect(self.success_url)
