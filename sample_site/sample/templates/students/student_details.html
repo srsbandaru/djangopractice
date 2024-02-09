@@ -3,7 +3,8 @@
     Student Details
 {% endblock title %}
 {% block content %}
-    <h1>{{students.studentName}}</h1>
+    <h1 class="text-success">{{students.studentName}}</h1>
     <p>Age - {{students.studentAge}}</p>
     <p>Education - {{students.studentEducation}}</p>
+    <button class="btn btn-warning" type="submit" onclick="window.location = '{% url 'sample:students' %}'">Back</button>
 {% endblock content %}

@@ -140,7 +140,7 @@ def Sankranthi(request):
 # Create Student
 class create_student(View):
     template = "students/student_form.html"
-    success_url = "sample:main"
+    success_url = "sample:students"
 
     def get(self, request):
         form = StudentForm()
