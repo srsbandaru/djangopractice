@@ -3,9 +3,9 @@
     Employee Details
 {% endblock title %}
 {% block content %}
-    <h1>{{employee.FIRST_NAME}} {{employee.LAST_NAME}}</h1>
+    <h1 class="text-success">{{employee.FIRST_NAME}} {{employee.LAST_NAME}}</h1>
     <p>Job ID - {{employee.JOB_ID}}</p>
     <p>Employee ID - {{employee.EMPLOYEE_ID}}</p>
     <p>Salary - {{employee.SALARY}}</p>
-    <a href="/employee">Back</a>
+    <a class="btn btn-warning" href="/employee">Back</a>
 {% endblock content %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
-from .forms import StudentForm
+from .forms import StudentForm, EmployeeForm
 from .models import EmployeeRoster, Students, Employee, Trip
 from django.views import View
 
@@ -151,6 +151,26 @@ class create_student(View):
     
     def post(self, request):
         form = StudentForm(request.POST)
+        if not form.is_valid():
+            context = {
+                'form':form
+            }
+            return render(request, self.template, context)
+        form.save()
+        return redirect(self.success_url)
+
+class create_employee(View):
+    template = "employee/employee_form.html"
+    success_url = "sample:employee"
+
+    def get(self, request):
+        form = EmployeeForm()
+        context = {
+            'form':form
+        }
+        return render(request, self.template, context)
+    def post(self, request):
+        form = EmployeeForm(request.POST)
         if not form.is_valid():
             context = {
                 'form':form

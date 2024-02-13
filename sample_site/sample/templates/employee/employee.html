@@ -4,12 +4,16 @@
 {% endblock title %}
 {% block content %}
     <h1>Employees</h1>
-    <ul>
+    <div class="list-group">
         {% for employee in Employees %}
-        <a href="details/{{employee.EMPLOYEE_ID}}">
-            <li>{{employee.FIRST_NAME}} {{employee.LAST_NAME}}</li>
-        </a>
+            <a class="fs-4 list-group-item list-group-item-action" href="details/{{employee.EMPLOYEE_ID}}">
+                {{employee.FIRST_NAME}} {{employee.LAST_NAME}}
+            </a>
         {% endfor %}
-    </ul>
-    <a href="/">Back</a>
+    </div>
+    <p class="m-3">
+        <a class="btn btn-primary" href="{% url 'sample:create_employee' %}">Add Employee</a> 
+        <a class="btn btn-danger" href="/">Back</a>
+    </p>
+    
 {% endblock content %}
