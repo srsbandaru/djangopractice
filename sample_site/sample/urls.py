@@ -26,4 +26,5 @@ urlpatterns = [
     path('trip/', views.TripView, name = "TripView"),
     path('trip/details/<int:id>', views.TripDetails, name = "TripDetails"),
     path('festivals/sankranthi', views.Sankranthi, name = "Sankranthi"),
+    path('test/', views.test, name = "test")
 ]

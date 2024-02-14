@@ -178,3 +178,10 @@ class create_employee(View):
             return render(request, self.template, context)
         form.save()
         return redirect(self.success_url)
+    
+def test(request):
+    template = loader.get_template("test.html")
+    context = {
+        "firstName":"Surya"
+    }
+    return HttpResponse(template.render(context, request))
