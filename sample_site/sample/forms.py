@@ -1,6 +1,5 @@
 from django.forms import ModelForm
-from sample.models import Students
-from sample.models import Employee
+from sample.models import Students, Employee
 
 class StudentForm(ModelForm):
     class Meta:
@@ -10,4 +9,4 @@ class StudentForm(ModelForm):
 class EmployeeForm(ModelForm):
     class Meta:
         model = Employee
-        fields = "__all__"   
+        fields = "__all__"  

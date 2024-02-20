@@ -19,6 +19,7 @@ urlpatterns = [
     path('students/', views.students, name = "students"),
     path('students/details/<int:id>', views.studentDetails, name = "studentDetails"),
     path('students/create', views.create_student.as_view(), name = "create_student"),
+    path('students/update/<int:pk>', views.update_student.as_view(), name = "update_student"),
     path('employee/', views.employee, name = "employee"),
     path('employee/details/<int:id>', views.employeeDetails, name = "employeeDetails"),
     path('employee/create', views.create_employee.as_view(), name = "create_employee"),

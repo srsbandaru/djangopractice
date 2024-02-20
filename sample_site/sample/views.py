@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.template import loader
 from .forms import StudentForm, EmployeeForm
 from .models import EmployeeRoster, Students, Employee, Trip
 from django.views import View
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 # def home(request):
@@ -138,7 +139,7 @@ def Sankranthi(request):
     return HttpResponse(template.render())
 
 # Create Student
-class create_student(View):
+class create_student(LoginRequiredMixin,View):
     template = "students/student_form.html"
     success_url = "sample:students"
 
@@ -159,6 +160,31 @@ class create_student(View):
         form.save()
         return redirect(self.success_url)
 
+# Update Student
+class update_student(LoginRequiredMixin, View):
+    model = Students
+    template = "students/student_form.html"
+    success_url = "sample:students"
+
+    def get(self, request, pk):
+        student = get_object_or_404(self.model, id=pk)
+        form = StudentForm(instance=student)
+        context = {
+            'form':form
+        }
+        return render(request, self.template, context)
+    def post(self, request, pk):
+        student = get_object_or_404(self.model, id=pk)
+        form = StudentForm(request.POST, instance=student)
+        if not form.is_valid():
+            context = {
+                'form':form
+            }
+            return render(request, self.template, context)
+        form.save()
+        return redirect(self.success_url)
+    
+# Create Employee
 class create_employee(View):
     template = "employee/employee_form.html"
     success_url = "sample:employee"
@@ -179,9 +205,12 @@ class create_employee(View):
         form.save()
         return redirect(self.success_url)
     
+# test view 
 def test(request):
     template = loader.get_template("test.html")
     context = {
-        "firstName":"Surya"
+        "firstName":"Sriram Surya",
+        "lastName":"Bandaru",
+        "welcomeText":0
     }
     return HttpResponse(template.render(context, request))

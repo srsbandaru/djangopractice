@@ -6,5 +6,8 @@
     <h1 class="text-success">{{students.studentName}}</h1>
     <p>Age - {{students.studentAge}}</p>
     <p>Education - {{students.studentEducation}}</p>
-    <button class="btn btn-warning" type="submit" onclick="window.location = '{% url 'sample:students' %}'">Back</button>
+    <button class="btn btn-primary" type="submit" 
+    onclick="window.location = '{% url 'sample:update_student' students.id %}'">Update</button>
+    <button class="btn btn-warning" type="submit" 
+    onclick="window.location = '{% url 'sample:students' %}'">Back</button>
 {% endblock content %}

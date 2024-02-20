@@ -6,6 +6,14 @@
         <title>Test</title>
     </head>
     <body>
-        <h1>Hi {{firstName}}, How are you</h1>
+        {% with welcomeText=0 %}
+            {% if welcomeText == 1 %}
+                <h1>Hello {{firstName}} {{lastName}}, How are you</h1>
+            {% elif welcomeText == 2 %}
+                <h1>Welcome {{firstName}} {{lastName}}</h1>
+            {% else %}
+                <h1>Thank you</h1>
+            {% endif %}
+        {% endwith %}
     </body>
 </html>
