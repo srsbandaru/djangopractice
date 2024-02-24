@@ -8,6 +8,8 @@
     <p>Education - {{students.studentEducation}}</p>
     <button class="btn btn-primary" type="submit" 
     onclick="window.location = '{% url 'sample:update_student' students.id %}'">Update</button>
+    <button class="btn btn-danger" type="submit"
+    onclick="window.location = '{% url 'sample:delete_student' students.id %}'">Delete</button>
     <button class="btn btn-warning" type="submit" 
     onclick="window.location = '{% url 'sample:students' %}'">Back</button>
 {% endblock content %}

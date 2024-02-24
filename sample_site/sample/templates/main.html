@@ -5,36 +5,53 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Sample Site</h1>
-    <ul>
-        <li><a href="members/">Members</a></li>
-        <li><a href="sample/">Sample</a></li>
-        <li><a href="students/">Students</a></li>
-        <li><a href="employee/">Employees</a></li>
-        <li><a href="trip/">Trip</a></li>
-    </ul>
-    <h1>English</h1>
-    <ul>
-        <li><a href="eng/worksheet-1">Worksheet 1</a></li>
-        <li><a href="eng/worksheet-13">Worksheet 13</a></li>
-        <li><a href="eng/grammar">Grammar</a></li>
-        <li><a href="eng/worksheet-16">Worksheet 16</a></li>
-        <li><a href="eng/worksheet-18">Worksheet 18</a></li>
-    </ul>
-    <h1>Home Science</h1>
-    <ul>
-        <li><a href="hs/orange-squash">Orange Squash</a></li>
-    </ul>
-    <h1>Painting</h1>
-    <ul>
-        <li><a href="painting/exam-QA">Exam-QA</a></li>
-    </ul>
-    <h1>Webpage</h1>
-    <ul>
-        <li><a href="travelblog/travel">Travel Blog</a></li>
-    </ul>
-    <h1>Festival Page</h1>
-    <ul>
-        <li><a href="festivals/sankranthi">Sankranthi</a></li>
-    </ul>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-4">
+                <h1>Sample Site</h1>
+                <div class="list-group">
+                    <a href="members/" class="list-group-item list-group-item-action">Members</a>
+                    <a href="sample/" class="list-group-item list-group-item-action">Sample</a>
+                    <a href="students/" class="list-group-item list-group-item-action">Students</a>
+                    <a href="employee/" class="list-group-item list-group-item-action">Employees</a>
+                    <a href="trip/" class="list-group-item list-group-item-action">Trip</a>
+                    <a href="schools/" class="list-group-item list-group-item-action">Schools</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <h1>English</h1>
+                <div class="list-group">
+                    <a href="eng/worksheet-1" class="list-group-item list-group-item-action">Worksheet 1</a>
+                    <a href="eng/worksheet-13" class="list-group-item list-group-item-action">Worksheet 13</a>
+                    <a href="eng/grammar" class="list-group-item list-group-item-action">Grammar</a>
+                    <a href="eng/worksheet-16" class="list-group-item list-group-item-action">Worksheet 16</a>
+                    <a href="eng/worksheet-18" class="list-group-item list-group-item-action">Worksheet 18</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <h1>Home Science</h1>
+                <div class="list-group">
+                    <a href="hs/orange-squash" class="list-group-item list-group-item-action">Orange Squash</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <h1>Painting</h1>
+                <div class="list-group">
+                    <a href="painting/exam-QA" class="list-group-item list-group-item-action">Exam-QA</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <h1>Webpage</h1>
+                <div class="list-group">
+                    <a href="travelblog/travel" class="list-group-item list-group-item-action">Exam-QA</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <h1>Festivals</h1>
+                <div class="list-group">
+                    <a href="festivals/sankranthi" class="list-group-item list-group-item-action">Sankranthi</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

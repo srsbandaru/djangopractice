@@ -183,6 +183,24 @@ class update_student(LoginRequiredMixin, View):
             return render(request, self.template, context)
         form.save()
         return redirect(self.success_url)
+
+# Delete student
+class delete_student(LoginRequiredMixin, View):
+    model = Students
+    template = "students/student_confirm_delete.html"
+    success_url = "sample:students"
+
+    def get(self, request, pk):
+        student = get_object_or_404(self.model, id=pk)
+        context = {
+            'student':student
+        }
+        return render(request, self.template, context)
+    
+    def post(self, request, pk):
+        student = get_object_or_404(self.model, id=pk)
+        student.delete()
+        return redirect(self.success_url)
     
 # Create Employee
 class create_employee(View):
